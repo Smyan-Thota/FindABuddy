@@ -1,0 +1,98 @@
+[
+        {
+            "name": "NAME",
+            "interests": "gym-bro",
+            "year": "YEAR",
+            "age": "AGE",
+            "major": "MAJOR",
+            "gender": "GENDER"
+        },
+        {
+            "name": "NAME",
+            "interests": "cooking-partner",
+            "year": "YEAR",
+            "age": "AGE",
+            "major": "MAJOR",
+            "gender": "GENDER"
+        },
+            {
+              "name": "Alice",
+              "interests": "gym-bro",
+              "year": "3",
+              "age": "21",
+              "major": "Exercise Science",
+              "gender": "female"
+            },
+            {
+              "name": "Bob",
+              "interests": "cooking-partner",
+              "year": "2",
+              "age": "17",
+              "major": "Culinary Arts",
+              "gender": "male"
+            },
+            {
+              "name": "Charlie",
+              "interests": "gym-bro",
+              "year": "4",
+              "age": "23",
+              "major": "Physical Therapy",
+              "gender": "male"
+            },
+            {
+              "name": "Diana",
+              "interests": "cooking-partner",
+              "year": "1",
+              "age": "18",
+              "major": "Nutrition",
+              "gender": "female"
+            },
+            {
+              "name": "Ethan",
+              "interests": "gym-bro",
+              "year": "3",
+              "age": "20",
+              "major": "Sports Medicine",
+              "gender": "male"
+            },
+            {
+              "name": "Fiona",
+              "interests": "cooking-partner",
+              "year": "2",
+              "age": "19",
+              "major": "Hospitality Management",
+              "gender": "female"
+            },
+            {
+              "name": "George",
+              "interests": "gym-bro",
+              "year": "4",
+              "age": "22",
+              "major": "Kinesiology",
+              "gender": "male"
+            },
+            {
+              "name": "Hannah",
+              "interests": "cooking-partner",
+              "year": "1",
+              "age": "19",
+              "major": "Biology",
+              "gender": "female"
+            },
+            {
+              "name": "Ian",
+              "interests": "gym-bro",
+              "year": "3",
+              "age": "20",
+              "major": "Biomedical Engineering",
+              "gender": "male"
+            },
+            {
+              "name": "Julia",
+              "interests": "cooking-partner",
+              "year": "1",
+              "age": "17",
+              "major": "Biology",
+              "gender": "female"
+            }    
+]
