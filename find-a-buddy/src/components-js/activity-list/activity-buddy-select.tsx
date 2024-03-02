@@ -1,30 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MenuButton } from "../misc/menu-button.tsx";
+import dummyData from "./../../dummyValues/mockData.json";
 
-/*
- * The goal of ActivityBuddySelect is to display the output of a query done in the backend based on parameters input by the front end.
- * At the moment, the parameters are the activity that the other person is interested in finding a partner for and a number of arbitrary
- * parameters that I kinda just made up and listed in the filtersProps interface in activity-list.tsx. 
- * 
- * ActivityBuddySelect is just an interface that stores the props for this UI element.
- */
-const ActivityBuddySelect = (props : ActivityBuddyProps) => {
+const ActivityBuddySelect = (props: ActivityBuddyProps) => {
+  const [data, setData] = useState<any>(null);
+  const [valuesList, setValuesList] = useState<JSX.Element[] | null>(null);
 
-    return(
-        <div className="activity-buddy-select">
-            <h1>{`Select a ${props.activityName}`}</h1>
-            <p>
-                In the future we need to add a list that will display an output to a query
-                that searches for suitable {props.activityName}
-            </p>
-            <MenuButton buttonText="Back" pathString="activity-list" />
-        </div>
-    )
-}
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-interface ActivityBuddyProps {
-    activityName: string,
-    parameterName: string
+  useEffect(() => {
+    if (data) {
+      const listItems = data.map((user: any) =>
+      <div>
+        <li key={user.name}>
+            {user.name} {user.year} {user.age} {user.major} {user.gender}</li>
+      </div>
+      );
+      setValuesList(listItems);
+    }
+  }, [data]);
+
+  const fetchData = async () => {
+    try {
+      const filteredData = dummyData.filter((user) => user.interests === props.parameterName);
+      setData(filteredData);
+    } catch (error) {
+      console.error("Error fetching the data: ", error);
+    }
+  };
+
+  return (
+    <div className="activity-buddy-select">
+      <h1>{`Select a ${props.activityName}`}</h1>
+      <p>
+        In the future we need to add a list that will display an output to a query that searches for suitable{" "}
+        {props.activityName}
+      </p>
+      <ul>{valuesList}</ul>
+      <MenuButton buttonText="Back" pathString="activity-list" />
+    </div>
+  );
 };
 
-export { ActivityBuddySelect, ActivityBuddyProps}
+interface ActivityBuddyProps {
+  name: string;
+  interests: string;
+  year: string;
+  age: string;
+  major: string;
+  gender: string;
+  activityName: string;
+  parameterName: string;
+}
+
+export { ActivityBuddySelect, ActivityBuddyProps };
