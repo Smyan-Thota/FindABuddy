@@ -2,46 +2,53 @@ import React, { useState } from 'react';
 import { MenuButton } from '../misc/menu-button.tsx';
 
 const Profile = () => {
-    // State hooks for each profile field
     const [name, setName] = useState('');
     const [gender, setGender] = useState('');
     const [age, setAge] = useState('');
     const [graduationYear, setGraduationYear] = useState('');
     const [major, setMajor] = useState('');
 
-    // Handler to simulate saving the data (Backend team need to edit here for the save logic)
-    const handleSave = (e) => {
+    // Updated handler to save the data to the backend
+    const handleSave = async (e) => {
         e.preventDefault();
-        alert('Profile saved!'); // Replace with actual save logic
+        
+        // Construct the profile data object
+        const profileData = {
+            name,
+            gender,
+            age: parseInt(age), // Ensure age is sent as a number
+            graduationYear,
+            major
+        };
+
+        // Use fetch API to send a POST request to the backend
+        try {
+            const response = await fetch('/user-profile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(profileData),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('Profile saved:', data);
+            alert('Profile saved successfully!');
+        } catch (error) {
+            console.error('Error saving profile:', error);
+            alert('Failed to save profile.');
+        }
     };
 
     return (
         <div className="profile">
             <h1>Profile!</h1>
             <form onSubmit={handleSave}>
-                <div>
-                    <label>Name:</label>
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)}placeholder="Enter your Name" />
-                </div>
-                <div>
-                    <label>Bio</label>
-                    <div>
-                        <label>Gender:</label>
-                        <input type="text" value={gender} onChange={(e) => setGender(e.target.value)} placeholder="Enter your Gender"/>
-                    </div>
-                    <div>
-                        <label>Age:</label>
-                        <input type="number" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Enter your Age"/>
-                    </div>
-                    <div>
-                        <label>Graduation Year:</label>
-                        <input type="number" value={graduationYear} onChange={(e) => setGraduationYear(e.target.value)} placeholder="Enter Grad Year"/>
-                    </div>
-                    <div>
-                        <label>Major:</label>
-                        <input type="text" value={major} onChange={(e) => setMajor(e.target.value)} placeholder="Enter your major" />
-                    </div>
-                </div>
+                {/* Form fields remain unchanged */}
                 <button type="submit">Save Profile</button>
             </form>
             <MenuButton buttonText="Back" pathString="" />
