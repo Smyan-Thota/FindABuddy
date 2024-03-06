@@ -19,7 +19,7 @@ const MenuButton = (props : MenuButtonProps) => {
 interface MenuButtonProps {
     buttonText : string,
     pathString : string,
-    additionalProps?: object
+    additionalProps?: any
 };
 
 export { MenuButton, MenuButtonProps }
