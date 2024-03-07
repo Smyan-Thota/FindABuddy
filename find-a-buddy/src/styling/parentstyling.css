@@ -24,31 +24,40 @@ Color resource: https://case.edu/brand/visual-identity/color*/
     --Button-Margin-Left: -35vw;
 }
 
+
+/* Removes the empty margin from the topp of the header */
+h1 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
 /* Header style */
 .style-header {
     background-color: var(--CWRU-Blue);
-    margin: -25px;
     height: 60px;
 }
 
 /* Header text */
 .style-header-text {
     color: var(--Light-Gray);
-    position: relative;
-    top: 8px;
-    text-align: left;
-    left: var(--Text-Margin-Left);
+    text-align: center;
 }
 
 /* Styles all MenuButton elements (currently it looks like all of our buttons are) */
-.style-menu-button {
-    color: var(--Light-Gray);
+.menu-button {
+    width: 10%;
     background-color: var(--CWRU-Blue);
-    position: relative;
-    text-align: left;
+    text-align: center;
     left: var(--Button-Margin-Left);
-    padding: 15px;
+    padding: 1%;
+    margin: 2%;
 }
+
+.menu-button-link {
+    text-decoration: none;
+    color: var(--Light-Gray);
+}
+
 
 /* Style profile attributes (e.g. name, gender, age...) */
 .style-profile-attr {

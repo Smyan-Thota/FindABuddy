@@ -1,0 +1,28 @@
+.activity-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button-selector {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.button-selector button {
+    width: 10em;
+    background-color: rgb(0, 48, 113);
+    color: rgb(211, 211, 211);;
+}
+
+.button-selector-wrapper {
+    display: grid;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.filter-column {
+    margin: auto 2% auto 2%;
+}

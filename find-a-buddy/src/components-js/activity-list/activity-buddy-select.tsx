@@ -32,6 +32,10 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
       if (filterJSONData.year   != '') { filteredData = filteredData.filter((user) => user.year === filterJSONData.year) }
       if (filterJSONData.age    != '') { filteredData = filteredData.filter((user) => user.age === filterJSONData.age) }
 
+      filteredData.map((user, index) => {
+        user["id"] = index
+      })
+
       setData(filteredData);
     } catch (error) {
       console.error("Error fetching the data: ", error);
@@ -48,9 +52,8 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
       {data && (
         <div className="activity-style-table">
           <DataGrid rows={data} columns={columns}
-            getRowClassName={(params) => {
-              return params.row.id % 2 === 0 ? 'even-row' : 'odd-row';
-            }}/>
+            getRowClassName={(params) => { return params.row.id % 2 === 0 ? 'even-row' : 'odd-row'; }}
+            />
         </div>
       )}
       <MenuButton buttonText="Back" pathString="activity-list" />

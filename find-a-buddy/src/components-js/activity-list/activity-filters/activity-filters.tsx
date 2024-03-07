@@ -1,4 +1,9 @@
 import React from "react";
+import GenderSelector from "./gender-selector.tsx";
+import MajorSelector from "./major-selector.tsx";
+import YearSelector from "./year-selector.tsx";
+import AgeSelector from "./age-selector.tsx";
+import "./../../../styling/styling-filters.css";
 
 const ActivityFilters = () => {
     const validMajors = [
@@ -30,49 +35,20 @@ const ActivityFilters = () => {
 
     return(
         <div className="activity-filters">
-            <div>
-                <p>Gender</p>
-                <div>
-                    <button onClick={() => {modifyCookie("gender", "male")}} >
-                        Man
-                    </button>
-                    <button onClick={() => {modifyCookie("gender", "female")}}>
-                        Woman
-                    </button>
-                    <button onClick={() => {modifyCookie("gender", "other")}}>
-                        Other
-                    </button>
-                </div>
-                <div>
-                    <p>Major</p>
-                    <input type="text" id="majorInputFormMajor"></input>
-                    <button onClick={() => {changeVal("majorInputFormMajor", "major")}}>Submit</button>
-                </div>
-                <div>
-                    <p>Year</p>
-                    <div>
-                        <button onClick={() => {modifyCookie("year", "1")}} >
-                            Freshman
-                        </button>
-                        <button onClick={() => {modifyCookie("year", "2")}}>
-                            Sophomore
-                        </button>
-                        <button onClick={() => {modifyCookie("year", "3")}}>
-                            Junior
-                        </button>
-                        <button onClick={() => {modifyCookie("year", "4")}}>
-                            Senior
-                        </button>
-                    </div>
-                </div>    
-                <div>
-                    <p>Year</p>
-                    <input type="number" id="majorInputFormAge"></input>
-                    <button onClick={() => {changeVal("majorInputFormAge", "age")}}>Submit</button>
-                </div>
+            <div className="filter-column">
+                <GenderSelector valueChangeMethod={modifyCookie} />           
+                <YearSelector   valueChangeMethod={modifyCookie} />
+            </div>   
+            <div className="filter-column">
+                <AgeSelector    valueChangeMethod={changeVal}    />
+                <MajorSelector  valueChangeMethod={changeVal}    />
             </div>
         </div>
     )
 }
 
-export {ActivityFilters};
+interface SelectorParams {
+    valueChangeMethod(val1: string, val2: string): void
+}
+
+export {ActivityFilters, SelectorParams};
