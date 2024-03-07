@@ -9,12 +9,13 @@ const Profile = () => {
     const [major, setMajor] = useState('');
 
     const handleSave = async (e) => {
+        console.log("Attempting to save profile..."); // Debugging line
         e.preventDefault();
         
         const profileData = {
             name,
             gender,
-            age: parseInt(age, 10), // Make sure to parse as integer
+            age: parseInt(age, 10), // Ensure age is sent as an integer
             graduationYear,
             major
         };
@@ -43,27 +44,57 @@ const Profile = () => {
 
     return (
         <div className="profile">
-            <h1>Profile!</h1>
+            <h1>Profile</h1>
             <form onSubmit={handleSave}>
                 <div>
                     <label htmlFor="name">Name:</label>
-                    <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
+                    <input 
+                        id="name" 
+                        type="text" 
+                        value={name} 
+                        onChange={(e) => setName(e.target.value)} 
+                        placeholder="Enter your name" 
+                    />
                 </div>
                 <div>
                     <label htmlFor="gender">Gender:</label>
-                    <input id="gender" type="text" value={gender} onChange={(e) => setGender(e.target.value)} placeholder="Enter your gender" />
+                    <input 
+                        id="gender" 
+                        type="text" 
+                        value={gender} 
+                        onChange={(e) => setGender(e.target.value)} 
+                        placeholder="Enter your gender" 
+                    />
                 </div>
                 <div>
                     <label htmlFor="age">Age:</label>
-                    <input id="age" type="number" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Enter your age" />
+                    <input 
+                        id="age" 
+                        type="number" 
+                        value={age} 
+                        onChange={(e) => setAge(e.target.value)} 
+                        placeholder="Enter your age" 
+                    />
                 </div>
                 <div>
                     <label htmlFor="graduationYear">Graduation Year:</label>
-                    <input id="graduationYear" type="number" value={graduationYear} onChange={(e) => setGraduationYear(e.target.value)} placeholder="Enter your graduation year" />
+                    <input 
+                        id="graduationYear" 
+                        type="number" 
+                        value={graduationYear} 
+                        onChange={(e) => setGraduationYear(e.target.value)} 
+                        placeholder="Enter your graduation year" 
+                    />
                 </div>
                 <div>
                     <label htmlFor="major">Major:</label>
-                    <input id="major" type="text" value={major} onChange={(e) => setMajor(e.target.value)} placeholder="Enter your major" />
+                    <input 
+                        id="major" 
+                        type="text" 
+                        value={major} 
+                        onChange={(e) => setMajor(e.target.value)} 
+                        placeholder="Enter your major" 
+                    />
                 </div>
                 <button type="submit">Save Profile</button>
             </form>
