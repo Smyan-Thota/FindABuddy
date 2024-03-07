@@ -9,6 +9,7 @@ import { MenuButton } from "../misc/menu-button.tsx";
  */
 
 const Homepage = () => {
+    document.cookie = '{"gender": "", "major": "", "year": "", "age": ""}';
 
     return(
         <div className="homepage style-header">

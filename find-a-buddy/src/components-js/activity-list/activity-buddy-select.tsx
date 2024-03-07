@@ -6,6 +6,7 @@ import dummyData from "./../../dummyValues/mockData.json";
 const ActivityBuddySelect = (props: ActivityBuddyProps) => {
   const [data, setData] = useState<any>(null);
 
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -20,12 +21,18 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
 
   const fetchData = async () => {
     try {
-      const filteredData = dummyData.filter((user) => user.interests === props.parameterName);
-      
-      // Add a unique id to each row
-      const dataWithIds = filteredData.map((row, index) => ({ id: index + 1, ...row }));
-      
-      setData(dataWithIds);
+      // This is just the basic url for the website
+      const filterJSON : string = document.cookie
+
+      const filterJSONData = JSON.parse(filterJSON)
+
+      let filteredData = dummyData.filter((user) => user.interests === props.parameterName)
+      if (filterJSONData.gender != '') { filteredData = filteredData.filter((user) => user.gender === filterJSONData.gender) }
+      if (filterJSONData.major  != '') { filteredData = filteredData.filter((user) => user.major === filterJSONData.major) }
+      if (filterJSONData.year   != '') { filteredData = filteredData.filter((user) => user.year === filterJSONData.year) }
+      if (filterJSONData.age    != '') { filteredData = filteredData.filter((user) => user.age === filterJSONData.age) }
+
+      setData(filteredData);
     } catch (error) {
       console.error("Error fetching the data: ", error);
     }
@@ -52,6 +59,7 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
 };
 
 interface ActivityBuddyProps {
+  interests?: string;
   activityName: string;
   parameterName: string;
 }

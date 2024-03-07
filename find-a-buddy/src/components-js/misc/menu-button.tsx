@@ -9,8 +9,8 @@ import "./../../styling/parentstyling.css";
 const MenuButton = (props : MenuButtonProps) => {
 
     return(
-        <button className="style-menu-button">
-            <Link to={`/${props.pathString}`} style={{ textDecoration: 'none', color: 'var(--text-color)'}}>
+        <button className="menu-button">
+            <Link to={`/${props.pathString}${(props.additionalProps) ? "/" + props.additionalProps as string : ""}`} style={{ textDecoration: 'none'}}>
                 {props.buttonText}
             </Link>
         </button>
