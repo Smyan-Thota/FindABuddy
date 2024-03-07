@@ -8,20 +8,17 @@ const Profile = () => {
     const [graduationYear, setGraduationYear] = useState('');
     const [major, setMajor] = useState('');
 
-    // Updated handler to save the data to the backend
     const handleSave = async (e) => {
         e.preventDefault();
         
-        // Construct the profile data object
         const profileData = {
             name,
             gender,
-            age: parseInt(age), // Ensure age is sent as a number
+            age: parseInt(age, 10), // Make sure to parse as integer
             graduationYear,
             major
         };
 
-        // Use fetch API to send a POST request to the backend
         try {
             const response = await fetch('/user-profile', {
                 method: 'POST',
@@ -48,10 +45,29 @@ const Profile = () => {
         <div className="profile">
             <h1>Profile!</h1>
             <form onSubmit={handleSave}>
-                {/* Form fields remain unchanged */}
+                <div>
+                    <label htmlFor="name">Name:</label>
+                    <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" />
+                </div>
+                <div>
+                    <label htmlFor="gender">Gender:</label>
+                    <input id="gender" type="text" value={gender} onChange={(e) => setGender(e.target.value)} placeholder="Enter your gender" />
+                </div>
+                <div>
+                    <label htmlFor="age">Age:</label>
+                    <input id="age" type="number" value={age} onChange={(e) => setAge(e.target.value)} placeholder="Enter your age" />
+                </div>
+                <div>
+                    <label htmlFor="graduationYear">Graduation Year:</label>
+                    <input id="graduationYear" type="number" value={graduationYear} onChange={(e) => setGraduationYear(e.target.value)} placeholder="Enter your graduation year" />
+                </div>
+                <div>
+                    <label htmlFor="major">Major:</label>
+                    <input id="major" type="text" value={major} onChange={(e) => setMajor(e.target.value)} placeholder="Enter your major" />
+                </div>
                 <button type="submit">Save Profile</button>
             </form>
-            <MenuButton buttonText="Back" pathString="" />
+            <MenuButton buttonText="Back" pathString="/" />
         </div>
     );
 }

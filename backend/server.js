@@ -1,11 +1,16 @@
+// Include necessary packages
 const express = require('express');
 const bodyParser = require('body-parser');
 const sqlite3 = require('sqlite3').verbose();
+const cors = require('cors'); // Include the cors package
+
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(bodyParser.json());
 
+// Create a new database connection to the SQLite database
 const db = new sqlite3.Database('./mydb.sqlite3', sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
     console.error(err.message);
