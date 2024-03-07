@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./../../styling/parentstyling.css";
 
 /*
  * The goal of this element is to display a button that the user can press to go to another page.
@@ -8,8 +9,8 @@ import { Link } from "react-router-dom";
 const MenuButton = (props : MenuButtonProps) => {
 
     return(
-        <button className="menu-button">
-            <Link to={`/${props.pathString}`} style={{ textDecoration: 'none'}}>
+        <button className="style-menu-button">
+            <Link to={`/${props.pathString}`} style={{ textDecoration: 'none', color: 'var(--text-color)'}}>
                 {props.buttonText}
             </Link>
         </button>
