@@ -13,8 +13,8 @@ const ActivityList = () => {
     });
 
     return(
-        <div className="activity-list">
-            <h1>Activity List!</h1>
+        <div className="activity-list style-header">
+            <h1 className="style-header-text">Activity List!</h1>
             <p>In the future we can add filters here to be passed into the query</p>
             <ActivityFilters filterVals = {filterVals} />
             <div>

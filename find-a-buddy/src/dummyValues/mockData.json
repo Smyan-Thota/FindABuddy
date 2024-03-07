@@ -1,20 +1,4 @@
 [
-        {
-            "name": "NAME",
-            "interests": "gym-bro",
-            "year": "YEAR",
-            "age": "AGE",
-            "major": "MAJOR",
-            "gender": "GENDER"
-        },
-        {
-            "name": "NAME",
-            "interests": "cooking-partner",
-            "year": "YEAR",
-            "age": "AGE",
-            "major": "MAJOR",
-            "gender": "GENDER"
-        },
             {
               "name": "Alice",
               "interests": "gym-bro",

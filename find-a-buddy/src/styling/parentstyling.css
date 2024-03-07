@@ -1,0 +1,82 @@
+/* Define some variables
+Color resource: https://case.edu/brand/visual-identity/color*/
+:root {
+    /* PRIMARY COLOR */
+    --CWRU-Blue: rgb(0, 48, 113);
+
+    /* SECONDARY COLORS */
+    --CWRU-Dark-Blue: rgb(9, 20, 58);
+    --CWRU-True-Blue: rgb(0, 122, 184);
+    --CWRU-Light-Blue: rgb(166, 210, 230);
+    --Black: rgb(0, 0, 0);
+    --Dark-Gray: rgb(153, 153, 153);
+    --Light-Gray: rgb(211, 211, 211);
+
+    /* TERTIARY COLORS */
+    --Terracotta-Orange: rgb(214, 61, 31);
+    --Fall-Yellow: rgb(255, 146, 57);
+    --Blue-Green: rgb(55, 126, 114);
+    --Violet-Purple: rgb(104, 44, 149);
+    --Vivid-Green: rgb(97, 165, 48);
+
+    /* LEFT MARGINS */
+    --Text-Margin-Left: 10vw;
+    --Button-Margin-Left: -35vw;
+}
+
+/* Header style */
+.style-header {
+    background-color: var(--CWRU-Blue);
+    margin: -25px;
+    height: 60px;
+}
+
+/* Header text */
+.style-header-text {
+    color: var(--Light-Gray);
+    position: relative;
+    top: 8px;
+    text-align: left;
+    left: var(--Text-Margin-Left);
+}
+
+/* Styles all MenuButton elements (currently it looks like all of our buttons are) */
+.style-menu-button {
+    color: var(--Light-Gray);
+    background-color: var(--CWRU-Blue);
+    position: relative;
+    text-align: left;
+    left: var(--Button-Margin-Left);
+    padding: 15px;
+}
+
+/* Style profile attributes (e.g. name, gender, age...) */
+.style-profile-attr {
+    position: relative;
+    text-align: left;
+    left: var(--Text-Margin-Left);
+}
+
+.profile-style-input-box {
+    position: relative;
+    text-align: left;
+    left: 20vw;
+    top: -20px;
+    width: 500px;
+}
+
+.activity-style-table {
+    margin: 0 auto;
+    height: 300;
+    width: 80%;
+}
+
+/* I believe this one is inherited for table rows */
+.odd-row {
+    background-color: var(--CWRU-Light-Blue);
+}
+
+/* I believe this one is inherited for table rows */
+.even-row {
+    background-color: white;
+}
