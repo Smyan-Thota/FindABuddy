@@ -7,20 +7,17 @@ import {ActivityFilters} from "./activity-filters/activity-filters.tsx";
  * using this app.
  */ 
 const ActivityList = () => {
-    const [filterVals, setFilterVals] = useState({
-        gender : "",
-        major : ""
-    });
 
     return(
         <div className="activity-list">
             <h1>Activity List!</h1>
             <p>In the future we can add filters here to be passed into the query</p>
-            <ActivityFilters filterVals = {filterVals} />
+            <ActivityFilters />
             <div>
-                <MenuButton buttonText="Gym Bro"         pathString="gym-bro"          additionalProps={[setFilterVals, filterVals]} />
-                <MenuButton buttonText="Cooking Partner" pathString="cooking-partner"  additionalProps={[setFilterVals, filterVals]} />
-            </div>           
+                <MenuButton buttonText="Gym Bro"         pathString="gym-bro"          />
+                <MenuButton buttonText="Cooking Partner" pathString="cooking-partner"  />
+            </div>
+            <MenuButton buttonText="Back" pathString="" />           
         </div>
     )
 }

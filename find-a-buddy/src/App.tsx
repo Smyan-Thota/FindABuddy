@@ -15,11 +15,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
             <Routes>
-                <Route path=""                element={ <Homepage     /> } />
-                <Route path="profile"         element={ <Profile      /> } />
-                <Route path="activity-list"   element={ <ActivityList /> } />
-                <Route path="gym-bro"         element={ <ActivityBuddySelect activityName="Gym Bro"         parameterName="gym-bro" /> } />
-                <Route path="cooking-partner" element={ <ActivityBuddySelect activityName="Cooking Partner" parameterName="cooking-partner" /> } />
+                <Route path=""                  element={ <Homepage     /> } />
+                <Route path="profile"           element={ <Profile      /> } />
+                <Route path="activity-list"     element={ <ActivityList /> } />
+                <Route path="gym-bro/*"         element={ <ActivityBuddySelect activityName="Gym Bro"         parameterName="gym-bro" /> } />
+                <Route path="cooking-partner/*" element={ <ActivityBuddySelect activityName="Cooking Partner" parameterName="cooking-partner" /> } />
             </Routes>
         </BrowserRouter>
     </div>

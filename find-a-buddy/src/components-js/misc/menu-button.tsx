@@ -9,7 +9,7 @@ const MenuButton = (props : MenuButtonProps) => {
 
     return(
         <button className="menu-button">
-            <Link to={`/${props.pathString}`} style={{ textDecoration: 'none'}}>
+            <Link to={`/${props.pathString}${(props.additionalProps) ? "/" + props.additionalProps as string : ""}`} style={{ textDecoration: 'none'}}>
                 {props.buttonText}
             </Link>
         </button>

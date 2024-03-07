@@ -1,12 +1,31 @@
 import React from "react";
-import { MenuButtonProps } from "../../misc/menu-button";
 
-const ActivityFilters = (props: ActivityFiltersProps) => {
-    let localFilterValues = props.filterVals;
+const ActivityFilters = () => {
+    const validMajors = [
+        "Computer Science",
+        "Chemistry",
+        "Math",
+        "Statistics",
+        "Arts"
+    ]
+
+    const modifyCookie = (cookieAttributeName : string, value : string) => {
+        let parsedCookie = JSON.parse(document.cookie)
+        parsedCookie[cookieAttributeName] = value
+        document.cookie = JSON.stringify(parsedCookie)
+        console.log(document.cookie)
+    }
 
     const changeVal = (inputFormName: string, valName: string) => {
-        const inputElement : HTMLInputElement = document.getElementById("majorInputForm")! as HTMLInputElement;
-        localFilterValues[`${valName}`] = inputElement.value
+        const inputElement : HTMLInputElement = document.getElementById(inputFormName)! as HTMLInputElement;
+        if ((inputFormName == "majorInputFormMajor" && validMajors.includes(inputElement.value)) || (inputFormName == "majorInputFormAge"))
+        {    
+            modifyCookie(valName, inputElement.value)
+        }
+        else 
+        {
+            inputElement.value = ""
+        }
     }
 
     return(
@@ -14,33 +33,46 @@ const ActivityFilters = (props: ActivityFiltersProps) => {
             <div>
                 <p>Gender</p>
                 <div>
-                    <button onClick={() => {localFilterValues.gender = "man"; console.log(localFilterValues)}} >
+                    <button onClick={() => {modifyCookie("gender", "male")}} >
                         Man
                     </button>
-                    <button onClick={() => {localFilterValues.gender = "woman"; console.log(localFilterValues)}}>
+                    <button onClick={() => {modifyCookie("gender", "female")}}>
                         Woman
                     </button>
-                    <button onClick={() => {localFilterValues.gender = "other"; console.log(localFilterValues)}}>
+                    <button onClick={() => {modifyCookie("gender", "other")}}>
                         Other
                     </button>
                 </div>
                 <div>
                     <p>Major</p>
-                    <input type="text" id="majorInputForm"></input>
-                    <button onClick={() => {changeVal("majorInputForm", "major"); console.log(localFilterValues)}}>Submit</button>
+                    <input type="text" id="majorInputFormMajor"></input>
+                    <button onClick={() => {changeVal("majorInputFormMajor", "major")}}>Submit</button>
+                </div>
+                <div>
+                    <p>Year</p>
+                    <div>
+                        <button onClick={() => {modifyCookie("year", "1")}} >
+                            Freshman
+                        </button>
+                        <button onClick={() => {modifyCookie("year", "2")}}>
+                            Sophomore
+                        </button>
+                        <button onClick={() => {modifyCookie("year", "3")}}>
+                            Junior
+                        </button>
+                        <button onClick={() => {modifyCookie("year", "4")}}>
+                            Senior
+                        </button>
+                    </div>
+                </div>    
+                <div>
+                    <p>Year</p>
+                    <input type="number" id="majorInputFormAge"></input>
+                    <button onClick={() => {changeVal("majorInputFormAge", "age")}}>Submit</button>
                 </div>
             </div>
         </div>
     )
 }
 
-interface ActivityFiltersProps {
-    filterVals : FilterVals
-}
-
-interface FilterVals {
-    gender : string,
-    major : string
-}
-
-export {ActivityFilters, ActivityFiltersProps, FilterVals};
+export {ActivityFilters};
