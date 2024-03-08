@@ -96,10 +96,9 @@ const Profile = () => {
                         placeholder="Enter your major" 
                     />
                 </div>
-                <MenuButton buttonText="Back" pathString="" />
                 <button className="style-menu-button" type="submit">Save Profile</button>
             </form>
-            <MenuButton buttonText="Back" pathString="/" />
+            <MenuButton buttonText="Back" pathString="" />
         </div>
     );
 }
