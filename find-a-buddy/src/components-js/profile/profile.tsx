@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MenuButton } from '../misc/menu-button.tsx';
+import "./../../styling/parentstyling.css";
 
 const Profile = () => {
     const [name, setName] = useState('');
