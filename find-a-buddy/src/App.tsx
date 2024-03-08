@@ -5,6 +5,7 @@ import Profile from './components-js/profile/profile.tsx';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ActivityList from './components-js/activity-list/activity-list.tsx';
 import { ActivityBuddySelect } from './components-js/activity-list/activity-buddy-select.tsx';
+import SignUp from './components-js/sign-up/sign-up.tsx';
 
 /*
  * This basically just serves to do the routing for the whole website, the actual website root is at
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
             <Routes>
                 <Route path=""                  element={ <Homepage     /> } />
+                <Route path="sign-up"           element={ <SignUp       /> } />
                 <Route path="profile"           element={ <Profile      /> } />
                 <Route path="activity-list"     element={ <ActivityList /> } />
                 <Route path="gym-bro/*"         element={ <ActivityBuddySelect activityName="Gym Bro"         parameterName="gym-bro" /> } />
