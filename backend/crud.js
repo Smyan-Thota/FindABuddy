@@ -27,7 +27,7 @@ async function readUser(userId) {
     const db = client.db("cluster0"); // Change "your_database_name" to your actual database name
 
     // Find user by userId
-    const user = await db.collection("users").findOne({ _id: ObjectId(userId) });
+    const user = await db.collection("users").findOne({ _id: new ObjectId(userId) });
     console.log("Found user:");
     console.log(user);
   } finally {
@@ -42,7 +42,7 @@ async function updateUser(userId, updatedUser) {
     await client.connect();
     const db = client.db("cluster0"); 
 
-    const result = await db.collection("users").updateOne({ _id: ObjectId(userId) }, { $set: updatedUser });
+    const result = await db.collection("users").updateOne({ _id: new ObjectId(userId) }, { $set: updatedUser });
     console.log(`Updated ${result.modifiedCount} user(s)`);
   } finally {
     await client.close();
@@ -56,7 +56,7 @@ async function deleteUser(userId) {
     await client.connect();
     const db = client.db("cluster0"); 
 
-    const result = await db.collection("users").deleteOne({ _id: ObjectId(userId) });
+    const result = await db.collection("users").deleteOne({ _id: new ObjectId(userId) });
     console.log(`Deleted ${result.deletedCount} user(s)`);
   } finally {
     await client.close();
@@ -84,8 +84,8 @@ async function testCreate() {
 
 // demo/test function for RUD
 async function testRUD(userId){
-  // await readUser(userId); 
-  // await updateUser(userId, { age: 50 }); 
+  await readUser(userId); 
+  await updateUser(userId, { age: 50 }); 
   await deleteUser(userId); 
 }
 
