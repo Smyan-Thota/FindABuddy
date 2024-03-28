@@ -63,6 +63,7 @@ async function deleteUser(userId) {
   }
 }
 
+
 // demo user object
 const user = {
   username: "harold_connie",
@@ -90,6 +91,8 @@ async function testRUD(userId){
 }
 
 
-//testCreate().catch(console.error);
+testCreate().catch(console.error);
 
-testRUD("66030c3813285b469bfbd81a").catch(console.error)
+//testRUD("65fdc424c788f326ca6c3662").catch(console.error)
+
+

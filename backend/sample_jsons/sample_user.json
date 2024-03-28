@@ -1,0 +1,10 @@
+{
+  "username": "harold conamacher",
+  "password": "racket",
+  "age": 55,
+  "gender": "Male",
+  "grad_year": 2023,
+  "major": "Computer Science",
+  "schedule": "Sample schedule data",
+  "created_at": "2024-03-21T00:00:00Z"
+}
