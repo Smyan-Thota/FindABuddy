@@ -15,10 +15,14 @@ const ActivityFilters = () => {
     ]
 
     const modifyCookie = (cookieAttributeName : string, value : string) => {
-        let parsedCookie = JSON.parse(document.cookie)
+        if(document.cookie.includes("CookieConsent")) {
+            console.log();
+            document.cookie = document.cookie.replace("CookieConsent=true; ", "");
+        }
+        console.log(document.cookie)
+        let parsedCookie = JSON.parse(document.cookie.replace("CookieConsent=true; ", ""))
         parsedCookie[cookieAttributeName] = value
         document.cookie = JSON.stringify(parsedCookie)
-        console.log(document.cookie)
     }
 
     const changeVal = (inputFormName: string, valName: string) => {
