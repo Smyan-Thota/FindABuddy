@@ -27,10 +27,11 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
       const filterJSONData = JSON.parse(filterJSON)
 
       let filteredData = dummyData.filter((user) => user.interests === props.parameterName)
-      if (filterJSONData.gender != '') { filteredData = filteredData.filter((user) => user.gender === filterJSONData.gender) }
-      if (filterJSONData.major  != '') { filteredData = filteredData.filter((user) => user.major === filterJSONData.major) }
-      if (filterJSONData.year   != '') { filteredData = filteredData.filter((user) => user.year === filterJSONData.year) }
-      if (filterJSONData.age    != '') { filteredData = filteredData.filter((user) => user.age === filterJSONData.age) }
+      if (filterJSONData.gender     !== '') { filteredData = filteredData.filter((user) => user.gender     === filterJSONData.gender) }
+      if (filterJSONData.major      !== '') { filteredData = filteredData.filter((user) => user.major      === filterJSONData.major) }
+      if (filterJSONData.year       !== '') { filteredData = filteredData.filter((user) => user.year       === filterJSONData.year) }
+      if (filterJSONData.age        !== '') { filteredData = filteredData.filter((user) => user.age        === filterJSONData.age) }
+      if (filterJSONData.extraParam !== '') { filteredData = filteredData.filter((user) => user.extraParam === filterJSONData.extraParam) }
 
       filteredData.map((user, index) => {
         user["id"] = index

@@ -1,0 +1,18 @@
+[
+    {
+        "buttonText": "",
+        "pathString": "activity-list"
+    },
+    {
+        "buttonText": "Gym Bro",
+        "pathString": "gym-bro"
+    },
+    {
+        "buttonText": "Cooking Partner",
+        "pathString": "cooking-partner"
+    },
+    {
+        "buttonText": "Study Buddy",
+        "pathString": "study-buddy-class-select"
+    }
+]

@@ -5,7 +5,8 @@
               "year": "3",
               "age": "21",
               "major": "Exercise Science",
-              "gender": "female"
+              "gender": "female",
+              "extraParam": ""
             },
             {
               "name": "Bob",
@@ -13,7 +14,8 @@
               "year": "2",
               "age": "17",
               "major": "Culinary Arts",
-              "gender": "male"
+              "gender": "male",
+              "extraParam": ""
             },
             {
               "name": "Charlie",
@@ -21,7 +23,8 @@
               "year": "4",
               "age": "23",
               "major": "Physical Therapy",
-              "gender": "male"
+              "gender": "male",
+              "extraParam": ""
             },
             {
               "name": "Diana",
@@ -29,7 +32,8 @@
               "year": "1",
               "age": "18",
               "major": "Nutrition",
-              "gender": "female"
+              "gender": "female",
+              "extraParam": ""
             },
             {
               "name": "Ethan",
@@ -37,7 +41,8 @@
               "year": "3",
               "age": "20",
               "major": "Sports Medicine",
-              "gender": "male"
+              "gender": "male",
+              "extraParam": ""
             },
             {
               "name": "Fiona",
@@ -45,7 +50,8 @@
               "year": "2",
               "age": "19",
               "major": "Hospitality Management",
-              "gender": "female"
+              "gender": "female",
+              "extraParam": ""
             },
             {
               "name": "George",
@@ -53,7 +59,8 @@
               "year": "4",
               "age": "22",
               "major": "Kinesiology",
-              "gender": "male"
+              "gender": "male",
+              "extraParam": ""
             },
             {
               "name": "Hannah",
@@ -61,7 +68,8 @@
               "year": "1",
               "age": "19",
               "major": "Biology",
-              "gender": "female"
+              "gender": "female",
+              "extraParam": ""
             },
             {
               "name": "Ian",
@@ -69,7 +77,8 @@
               "year": "3",
               "age": "20",
               "major": "Biomedical Engineering",
-              "gender": "male"
+              "gender": "male",
+              "extraParam": ""
             },
             {
               "name": "Julia",
@@ -77,6 +86,25 @@
               "year": "1",
               "age": "17",
               "major": "Biology",
-              "gender": "female"
-            }    
+              "gender": "female",
+              "extraParam": ""
+            },
+            {
+              "name": "Bo",
+              "interests": "study-buddy",
+              "year": "2",
+              "age": "19",
+              "major": "Biology",
+              "gender": "male",
+              "extraParam": "ACCT 101"
+            },  
+            {
+              "name": "Sophia",
+              "interests": "study-buddy",
+              "year": "3",
+              "age": "20",
+              "major": "Computer Science",
+              "gender": "female",
+              "extraParam": "CSDS 101"
+            }
 ]

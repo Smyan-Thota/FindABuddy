@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ActivityList from './components-js/activity-list/activity-list.tsx';
 import { ActivityBuddySelect } from './components-js/activity-list/activity-buddy-select.tsx';
 import SignUp from './components-js/sign-up/sign-up.tsx';
+import StudyBuddyClassSelect from './components-js/activities/study-buddy/study-buddy-class-select.tsx';
 
 /*
  * This basically just serves to do the routing for the whole website, the actual website root is at
@@ -16,12 +17,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
             <Routes>
-                <Route path=""                  element={ <Homepage     /> } />
-                <Route path="sign-up"           element={ <SignUp       /> } />
-                <Route path="profile"           element={ <Profile      /> } />
-                <Route path="activity-list"     element={ <ActivityList /> } />
-                <Route path="gym-bro/*"         element={ <ActivityBuddySelect activityName="Gym Bro"         parameterName="gym-bro" /> } />
-                <Route path="cooking-partner/*" element={ <ActivityBuddySelect activityName="Cooking Partner" parameterName="cooking-partner" /> } />
+                <Route path=""                          element={ <Homepage     /> } />
+                <Route path="sign-up"                   element={ <SignUp       /> } />
+                <Route path="profile"                   element={ <Profile      /> } />
+                <Route path="activity-list"             element={ <ActivityList /> } />
+                <Route path="gym-bro/*"                 element={ <ActivityBuddySelect   activityName="Gym Bro"         parameterName="gym-bro" /> } />
+                <Route path="cooking-partner/*"         element={ <ActivityBuddySelect   activityName="Cooking Partner" parameterName="cooking-partner" /> } />
+                <Route path="study-buddy/*"             element={ <ActivityBuddySelect   activityName="Study Buddy" parameterName="study-buddy" /> } />
+                <Route path="study-buddy-class-select/" element={ <StudyBuddyClassSelect /> } />
             </Routes>
         </BrowserRouter>
     </div>

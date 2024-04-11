@@ -10,7 +10,7 @@ import { MenuButton } from "../misc/menu-button.tsx";
  */
 
 const Homepage = () => {
-    document.cookie = '{"gender": "", "major": "", "year": "", "age": ""}';
+    document.cookie = '{"gender": "", "major": "", "year": "", "age": "", "extraParam": ""}';
 
     return(
         <div>

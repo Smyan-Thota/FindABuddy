@@ -16,7 +16,6 @@ const ActivityFilters = () => {
 
     const modifyCookie = (cookieAttributeName : string, value : string) => {
         if(document.cookie.includes("CookieConsent")) {
-            console.log();
             document.cookie = document.cookie.replace("CookieConsent=true; ", "");
         }
         console.log(document.cookie)
@@ -27,7 +26,7 @@ const ActivityFilters = () => {
 
     const changeVal = (inputFormName: string, valName: string) => {
         const inputElement : HTMLInputElement = document.getElementById(inputFormName)! as HTMLInputElement;
-        if ((inputFormName == "majorInputFormMajor" && validMajors.includes(inputElement.value)) || (inputFormName == "majorInputFormAge"))
+        if ((inputFormName === "majorInputFormMajor" && validMajors.includes(inputElement.value)) || (inputFormName === "majorInputFormAge"))
         {    
             modifyCookie(valName, inputElement.value)
         }
