@@ -21,15 +21,16 @@ async function createUser(user) {
 
 
 // function read a user
-async function readUser(userId) {
+async function readUser(username) {
   try {
     await client.connect();
     const db = client.db("cluster0"); // Change "your_database_name" to your actual database name
 
     // Find user by userId
-    const user = await db.collection("users").findOne({ _id: new ObjectId(userId) });
-    console.log("Found user:");
-    console.log(user);
+    const user = await db.collection("users").findOne({ username: username});
+    //console.log("Found user:");
+    //console.log(user);
+    return user;
   } finally {
     await client.close();
   }
@@ -80,15 +81,16 @@ async function createInterest(interest) {
 
 
 // Function to read an interest
-async function readInterest(interestId) {
+async function readInterest(interest_name) {
   try {
     await client.connect();
     const db = client.db("cluster0");
 
     // Find interest by interestId
-    const interest = await db.collection("interests").findOne({ _id: new ObjectId(interestId) });
-    console.log("Found interest:");
-    console.log(interest);
+    const interest = await db.collection("interests").findOne({ interest_name: interest_name });
+    //console.log("Found interest:");
+    //console.log(interest);
+    return interest;
   } finally {
     await client.close();
   }
@@ -146,8 +148,9 @@ async function readEvent(eventId) {
 
     // Find event by eventId
     const event = await db.collection("events").findOne({ _id: new ObjectId(eventId) });
-    console.log("Found event:");
-    console.log(event);
+    //console.log("Found event:");
+    //console.log(event);
+    return event;
   } finally {
     await client.close();
   }
