@@ -8,7 +8,7 @@ async function fetchUserByUsername(username) {
   try {
     await client.connect();
     const db = client.db("cluster0"); // Change "your_database_name" to your actual database name
-    const user = await db.collection("users").findOne({ username: username });
+    const user = await db.collection("users").findOne({ "username": username });
     return user;
   } finally {
     await client.close();

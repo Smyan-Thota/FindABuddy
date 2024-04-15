@@ -86,13 +86,14 @@ async function testCreate() {
 // demo/test function for RUD
 async function testRUD(userId){
   await readUser(userId); 
-  await updateUser(userId, { age: 50 }); 
-  await deleteUser(userId); 
+  await updateUser(userId, { grad_year: 1997 }); 
+  //await deleteUser(userId); 
+  await readUser(userId)
 }
 
 
-testCreate().catch(console.error);
+//testCreate().catch(console.error);
 
-//testRUD("65fdc424c788f326ca6c3662").catch(console.error)
+testRUD("660dc13ae580ca7d5ff658ac").catch(console.error)
 
 
