@@ -18,8 +18,13 @@ const {
     readEvent,
     updateEvent,
     deleteEvent
-  } = require('./crudFunctions.js'); 
+} = require('./crudFunctions.js'); 
+
+const {
+    fetchData
+} = require('./fetchAll.js')
   
 
 readEvent("661d7926b5058ef3f40c3c2f")
-  
+
+fetchData()
