@@ -1,5 +1,6 @@
 /* Define some variables
-Color resource: https://case.edu/brand/visual-identity/color*/
+Color resource: https://case.edu/brand/visual-identity/color
+*/
 :root {
     /* PRIMARY COLOR */
     --CWRU-Blue: rgb(0, 48, 113);
@@ -24,8 +25,12 @@ Color resource: https://case.edu/brand/visual-identity/color*/
     --Button-Margin-Left: -35vw;
 }
 
+.top-header {
+    background-color: var(--CWRU-Dark-Blue);
+    height: 100px;
+}
 
-/* Removes the empty margin from the topp of the header */
+/* Removes the empty margin from the top of the header */
 h1 {
     margin-block-start: 0px;
     margin-block-end: 0px;

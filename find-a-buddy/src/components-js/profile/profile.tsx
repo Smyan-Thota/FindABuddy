@@ -44,6 +44,7 @@ const Profile = () => {
     };
 
     return (
+        <div className="top-header">
         <div className="profile style-header">
             <h1 className="style-header-text">Profile</h1>
             <form onSubmit={handleSave}>
@@ -113,6 +114,7 @@ const Profile = () => {
                 <MenuButton buttonText="Back" pathString="" />
                 <button className="menu-button menu-button-link" type="submit">Save Profile</button>
             </form>
+        </div>
         </div>
     );
 }
