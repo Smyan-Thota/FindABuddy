@@ -107,9 +107,12 @@ const Profile = () => {
                         placeholder="Enter your major" 
                     />
                 </div>
-                <button className="style-menu-button" type="submit">Save Profile</button>
+                <br></br>
+                <br></br>
+                <br></br>
+                <MenuButton buttonText="Back" pathString="" />
+                <button className="menu-button menu-button-link" type="submit">Save Profile</button>
             </form>
-            <MenuButton buttonText="Back" pathString="" />
         </div>
     );
 }

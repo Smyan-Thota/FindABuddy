@@ -58,19 +58,22 @@ h1 {
     color: var(--Light-Gray);
 }
 
+button:hover {
+    cursor: pointer;
+}
 
 /* Style profile attributes (e.g. name, gender, age...) */
 .style-profile-attr {
     position: relative;
-    text-align: left;
-    left: var(--Text-Margin-Left);
+    text-align: center;
+    left: -7vw;
     top: 60px;
 }
 
 .profile-style-input-box {
     position: relative;
-    text-align: left;
-    left: 20vw;
+    text-align: center;
+    left: 7vw;
     top: 40px;
 }
 
