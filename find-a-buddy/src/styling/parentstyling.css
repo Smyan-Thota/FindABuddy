@@ -64,14 +64,14 @@ h1 {
     position: relative;
     text-align: left;
     left: var(--Text-Margin-Left);
+    top: 60px;
 }
 
 .profile-style-input-box {
     position: relative;
     text-align: left;
     left: 20vw;
-    top: -20px;
-    width: 500px;
+    top: 40px;
 }
 
 .activity-style-table {

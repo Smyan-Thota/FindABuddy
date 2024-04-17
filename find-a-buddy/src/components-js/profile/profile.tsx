@@ -44,11 +44,13 @@ const Profile = () => {
     };
 
     return (
-        <div className="profile">
-            <h1>Profile</h1>
+        <div className="profile style-header">
+            <h1 className="style-header-text">Profile</h1>
             <form onSubmit={handleSave}>
-                <div>
+                <div className="style-profile-attr">
                     <label htmlFor="name">Name:</label>
+                </div>
+                <div className="profile-style-input-box">
                     <input 
                         id="name" 
                         type="text" 
@@ -57,8 +59,10 @@ const Profile = () => {
                         placeholder="Enter your name" 
                     />
                 </div>
-                <div>
+                <div className="style-profile-attr">
                     <label htmlFor="gender">Gender:</label>
+                </div>
+                <div className="profile-style-input-box">
                     <input 
                         id="gender" 
                         type="text" 
@@ -67,8 +71,10 @@ const Profile = () => {
                         placeholder="Enter your gender" 
                     />
                 </div>
-                <div>
+                <div className="style-profile-attr">
                     <label htmlFor="age">Age:</label>
+                </div>
+                <div className="profile-style-input-box">
                     <input 
                         id="age" 
                         type="number" 
@@ -77,8 +83,10 @@ const Profile = () => {
                         placeholder="Enter your age" 
                     />
                 </div>
-                <div>
+                <div className="style-profile-attr">
                     <label htmlFor="graduationYear">Graduation Year:</label>
+                </div>
+                <div className="profile-style-input-box">
                     <input 
                         id="graduationYear" 
                         type="number" 
@@ -87,8 +95,10 @@ const Profile = () => {
                         placeholder="Enter your graduation year" 
                     />
                 </div>
-                <div>
+                <div className="style-profile-attr">
                     <label htmlFor="major">Major:</label>
+                </div>
+                <div className="profile-style-input-box">
                     <input 
                         id="major" 
                         type="text" 
