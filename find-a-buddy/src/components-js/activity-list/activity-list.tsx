@@ -25,8 +25,8 @@ const ActivityList = () => {
 
     return(
         <div>
-            <div className="activity-list style-header">
-                <h1 className="style-header-text">Activity List!</h1>
+            <div className="style-header">
+                <h1 className="style-header-text">Activity List</h1>
                 <ActivityFilters />
                 <select className="buddySelectorDropDown" id="buddySelectorDropDown" onChange={updateSelectedActivity}>
                     {activityList.map((element) => {

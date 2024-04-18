@@ -3,17 +3,31 @@ import { MenuButton } from '../misc/menu-button.tsx';
 import "./../../styling/parentstyling.css";
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
         <header className="header">
-            <img src="logo.png" alt="Company Logo" className="logo" />
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div className="top-header">
+                <div className="style-header-text">
+                    <img className="logo-size" src={require('./../../res/LogoExtraReal.png')} />
+                    Find-A-Buddy
+                </div>
+                <button className="menu-tab-button" onClick={toggleMenu}>MENU</button>
+                {isMenuOpen && (
+                    <div className="dropdown-menu">
+                        <nav>
+                            <a href="/">Home</a>
+                            <a href="/profile">Profile</a>
+                            <a href="/activity-list">Activities</a>
+                            <a href="/contact">Contact</a>
+                        </nav>
+                    </div>
+                )}
+            </div>
         </header>
     );
 }

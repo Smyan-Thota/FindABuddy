@@ -15,7 +15,10 @@ const Homepage = () => {
     return(
         <div>
             <div className="homepage style-header">
-                <h1 className="style-header-text">Find-A-Buddy!</h1>
+                <h1 className="style-header-text">Home</h1>
+            </div>
+            <div>
+                <img className="home-page-background" src={require('./../../res/HomePageDesign.png')} />
             </div>
             <div className="homepage-menu-buttons">
                 <MenuButton buttonText="Profile"    pathString="profile"       />

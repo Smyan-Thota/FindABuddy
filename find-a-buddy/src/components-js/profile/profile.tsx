@@ -44,77 +44,82 @@ const Profile = () => {
     };
 
     return (
-        <div className="top-header">
-        <div className="profile style-header">
-            <h1 className="style-header-text">Profile</h1>
-            <form onSubmit={handleSave}>
-                <div className="style-profile-attr">
-                    <label htmlFor="name">Name:</label>
-                </div>
-                <div className="profile-style-input-box">
-                    <input 
-                        id="name" 
-                        type="text" 
-                        value={name} 
-                        onChange={(e) => setName(e.target.value)} 
-                        placeholder="Enter your name" 
-                    />
-                </div>
-                <div className="style-profile-attr">
-                    <label htmlFor="gender">Gender:</label>
-                </div>
-                <div className="profile-style-input-box">
-                    <input 
-                        id="gender" 
-                        type="text" 
-                        value={gender} 
-                        onChange={(e) => setGender(e.target.value)} 
-                        placeholder="Enter your gender" 
-                    />
-                </div>
-                <div className="style-profile-attr">
-                    <label htmlFor="age">Age:</label>
-                </div>
-                <div className="profile-style-input-box">
-                    <input 
-                        id="age" 
-                        type="number" 
-                        value={age} 
-                        onChange={(e) => setAge(e.target.value)} 
-                        placeholder="Enter your age" 
-                    />
-                </div>
-                <div className="style-profile-attr">
-                    <label htmlFor="graduationYear">Graduation Year:</label>
-                </div>
-                <div className="profile-style-input-box">
-                    <input 
-                        id="graduationYear" 
-                        type="number" 
-                        value={graduationYear} 
-                        onChange={(e) => setGraduationYear(e.target.value)} 
-                        placeholder="Enter your graduation year" 
-                    />
-                </div>
-                <div className="style-profile-attr">
-                    <label htmlFor="major">Major:</label>
-                </div>
-                <div className="profile-style-input-box">
-                    <input 
-                        id="major" 
-                        type="text" 
-                        value={major} 
-                        onChange={(e) => setMajor(e.target.value)} 
-                        placeholder="Enter your major" 
-                    />
-                </div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <MenuButton buttonText="Back" pathString="" />
-                <button className="menu-button menu-button-link" type="submit">Save Profile</button>
-            </form>
-        </div>
+        <div>
+            <div className="style-header">
+                <h1 className="style-header-text">Profile</h1>
+            </div>
+            <div>
+                <img className="side-page-background" src={require('./../../res/ProfilePageDesign.png')} />
+            </div>
+            <div>
+                <form onSubmit={handleSave}>
+                    <div className="style-profile-attr">
+                        <label htmlFor="name">Name:</label>
+                    </div>
+                    <div className="profile-style-input-box">
+                        <input 
+                            id="name" 
+                            type="text" 
+                            value={name} 
+                            onChange={(e) => setName(e.target.value)} 
+                            placeholder="Enter your name" 
+                        />
+                    </div>
+                    <div className="style-profile-attr">
+                        <label htmlFor="gender">Gender:</label>
+                    </div>
+                    <div className="profile-style-input-box">
+                        <input 
+                            id="gender" 
+                            type="text" 
+                            value={gender} 
+                            onChange={(e) => setGender(e.target.value)} 
+                            placeholder="Enter your gender" 
+                        />
+                    </div>
+                    <div className="style-profile-attr">
+                        <label htmlFor="age">Age:</label>
+                    </div>
+                    <div className="profile-style-input-box">
+                        <input 
+                            id="age" 
+                            type="number" 
+                            value={age} 
+                            onChange={(e) => setAge(e.target.value)} 
+                            placeholder="Enter your age" 
+                        />
+                    </div>
+                    <div className="style-profile-attr">
+                        <label htmlFor="graduationYear">Graduation Year:</label>
+                    </div>
+                    <div className="profile-style-input-box">
+                        <input 
+                            id="graduationYear" 
+                            type="number" 
+                            value={graduationYear} 
+                            onChange={(e) => setGraduationYear(e.target.value)} 
+                            placeholder="Enter your graduation year" 
+                        />
+                    </div>
+                    <div className="style-profile-attr">
+                        <label htmlFor="major">Major:</label>
+                    </div>
+                    <div className="profile-style-input-box">
+                        <input 
+                            id="major" 
+                            type="text" 
+                            value={major} 
+                            onChange={(e) => setMajor(e.target.value)} 
+                            placeholder="Enter your major" 
+                        />
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <MenuButton buttonText="Back" pathString="" />
+                    <button className="menu-button menu-button-link" type="submit">Save Profile</button>
+                </form>
+            </div>
         </div>
     );
 }
