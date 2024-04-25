@@ -13,7 +13,8 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "node-rsa": "^1.1.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
@@ -23,7 +24,6 @@
     "install": "^0.13.0",
     "mysql": "^2.18.1",
     "npm": "^10.5.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.2"
+    "ts-node": "^10.9.2"
   }
 }
