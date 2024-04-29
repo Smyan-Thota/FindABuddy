@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.card{
+    width: 400px;                 /* Set width of cards */
+    border: 5px solid rgb(0, 48, 113);    /* Set up Border */
+    border-radius: 4px;           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    display: flex;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    max-width: fit-content;
+    margin-inline: auto;
+    transition: transform 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+    text-align: justify;
+    padding-left: 3%;
+    
+}
+.ptext{
+    text-align: left;
+    margin-bottom: 3px;
+    left: 0px;
+    padding-left: 3%;
+    
+}
+
+button{
+    width: 30%;
+    background-color: var(--CWRU-Blue);
+    text-align: center;
+    left: var(--Button-Margin-Left);
+    padding: 1%;
+    margin: 2%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--small-font-size);
+    color: var(--White);
+}
+
+  
