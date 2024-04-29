@@ -3,41 +3,6 @@ import { MenuButton } from "../misc/menu-button.tsx";
 import { DataGrid, GridColDef } from '@mui/x-data-grid'; // Import DataGrid component
 import dummyData from "./../../dummyValues/mockData.json";
 
-// removable code if it doesn't work
-
-const { MongoClient, ObjectId } = require('mongodb');
-
-const uri = "mongodb+srv://rxs1182:rs181102@cluster0.vqmsrmq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const client = new MongoClient(uri);
-
-const {
-    createUser,
-    readUser,
-    updateUser,
-    deleteUser,
-    createInterest,
-    readInterest,
-    updateInterest,
-    deleteInterest,
-    createEvent,
-    readEvent,
-    updateEvent,
-    deleteEvent
-} = require('../../../../backend/crudFunctions.js');  
-
-const {
-    fetchData
-} = require('../../../../backend/fetchAll.js'); 
-
-
-async function dummyUser(){
-    const x = await readUser("harold_connie");
-    return x;
-}
-
-// end of rohan's code
-
-
 const ActivityBuddySelect = (props: ActivityBuddyProps) => {
   const [data, setData] = useState<any>(null);
 
@@ -60,9 +25,6 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
       const filterJSON : string = document.cookie
 
       const filterJSONData = JSON.parse(filterJSON)
-
-      const x = await readUser("harold_connie");
-      console.log(x);
 
       let filteredData = dummyData.filter((user) => user.interests === props.parameterName)
       if (filterJSONData.gender     !== '') { filteredData = filteredData.filter((user) => user.gender     === filterJSONData.gender) }
