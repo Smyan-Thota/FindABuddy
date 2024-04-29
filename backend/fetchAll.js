@@ -35,7 +35,7 @@ async function fetchData() {
   }
 }
 
-//fetchData().catch(console.error);
+fetchData().catch(console.error);
 
 
 // Exporting the functions
