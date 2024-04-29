@@ -22,3 +22,11 @@ const {
     fetchData
 } = require('./fetchAll.js')
   
+
+async function test(){
+    const x = await readInterest("Beer Pong");
+    console.log(x);
+}
+
+
+test();

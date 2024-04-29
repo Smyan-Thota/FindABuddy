@@ -43,7 +43,7 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
     } catch (error) {
       console.error("Error fetching the data: ", error);
     }
-    
+
   };
 
   return (
