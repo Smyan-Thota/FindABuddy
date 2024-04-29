@@ -46,6 +46,7 @@ h1 {
 
 /* Header style */
 .style-header {
+    width: 100%!important;
     background-color: var(--CWRU-Blue);
     height: 95px;
 }
@@ -53,11 +54,12 @@ h1 {
 /* Header text */
 .style-header-text {
     color: var(--White);
+    padding: 1% 0 0 3%;
     position: relative;
     text-align: left;
-    left: 300px;
-    top: 15px;
     font-size: var(--large-font-size);
+    max-width: 100%!important;
+
 }
 
 /* Styles all MenuButton elements (currently it looks like all of our buttons are) */
@@ -122,7 +124,7 @@ body {
 }
 
 .home-page-background {
-    width: 100%;
+    width: 100%!important;
     height: 900px;
 }
 
@@ -153,4 +155,14 @@ nav a {
 
     position: absolute;
     right: 0;
+}
+
+.pop-up-menu-button {
+    width: 5%;
+    background-color: var(--CWRU-Blue);
+    text-align: center;
+    left: var(--Button-Margin-Left);
+    padding: 1%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--small-font-size);
 }
