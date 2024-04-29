@@ -46,16 +46,18 @@ async function matchingAlgorithm(username) {
         }
       }
 
-
-      // Add user's ID to break ties
-      score += user.user_id / 10000;
-
       // Store the score
-      scoreArray.push({ user, score });
+      scoreArray.push({ user: user, score: score });
     }
-
+    
     // Sorting the array of scores in ascending order
-    scoreArray.sort((a, b) => a.score - b.score);
+    scoreArray.sort((a, b) => {
+      if (a.score === b.score) {
+          // If scores are equal, use user ID to break ties
+          return a.user.user_id - b.user.user_id;
+      }
+      return a.score - b.score;
+  });
 
     // Extracting the sorted list of users
     const sortedUsers = scoreArray.map(entry => entry.user);
