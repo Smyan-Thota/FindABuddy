@@ -64,6 +64,8 @@ h1 {
 
 /* Styles all MenuButton elements (currently it looks like all of our buttons are) */
 .menu-button {
+
+
     width: 10%;
     background-color: var(--CWRU-Blue);
     text-align: center;
@@ -158,4 +160,28 @@ nav a {
     top: 0; 
     z-index: 1000; 
     
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 70px; /* Adjust this as necessary to fit your layout */
+    right: 0;
+    
+    width: 7%; /* This could also be set in pixels or em units */
+    background-color: var(--White);
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block; /* This makes each link fill the entire space of the dropdown */
+    color: var(--CWRU-Blue);
+    padding: 10px 16px; /* Add enough padding to increase the tappable area */
+    text-decoration: none;
+    border-bottom: 1px solid var(--CWRU-Light-Blue);
+}
+.dropdown-menu a:hover {
+    background-color: var(--CWRU-True-Blue); /* Adjust color as needed */
+    color: var(--White);
 }
