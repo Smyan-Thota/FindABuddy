@@ -6,7 +6,6 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        console.log('Menu toggle attempted');
         setIsMenuOpen(!isMenuOpen);
     };
 
@@ -17,7 +16,6 @@ const Header = () => {
                     <img className="logo-size" src={require('./../../res/LogoExtraReal.png')} />
                     Find-A-Buddy
                 </div>
-                <button className="menu-tab-button" onClick={toggleMenu}>MENU</button>
                 {isMenuOpen && (
                     <div className="dropdown-menu">
                         <nav>

@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { MenuButton } from "../misc/menu-button.tsx";
 import { DataGrid, GridColDef } from '@mui/x-data-grid'; // Import DataGrid component
 import dummyData from "./../../dummyValues/mockData.json";
+import Card from './card.tsx';
 
 const ActivityBuddySelect = (props: ActivityBuddyProps) => {
   const [data, setData] = useState<any>(null);
-
+  
+  const mockMatches = dummyData;  
 
   useEffect(() => {
     fetchData();
@@ -24,7 +26,7 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
       // This is just the basic url for the website
       const filterJSON : string = document.cookie
 
-      const filterJSONData = JSON.parse(filterJSON)
+      const filterJSONData = JSON.parse(filterJSON)["filters"]
 
       let filteredData = dummyData.filter((user) => user.interests === props.parameterName)
       if (filterJSONData.gender     !== '') { filteredData = filteredData.filter((user) => user.gender     === filterJSONData.gender) }
@@ -42,25 +44,28 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
       console.error("Error fetching the data: ", error);
     }
 
-
   };
 
   return (
+
+    
     <div className="activity-buddy-select style-header">
       <h1 className="style-header-text">{`Select a ${props.activityName}`}</h1>
       <p>
-        In the future we need to add a list that will display an output to a query that searches for suitable.{" "}
+        {" "}
         {props.activityName}
       </p>
-      {data && (
-        <div className="activity-style-table">
-          <DataGrid rows={data} columns={columns}
-            getRowClassName={(params) => { return params.row.id % 2 === 0 ? 'even-row' : 'odd-row'; }}
-            />
-        </div>
-      )}
+
+      <div>  
+        
+        <Card users={mockMatches} >
+        </Card> 
+          
+      </div>
+
+      
       <MenuButton buttonText="Back" pathString="activity-list" />
-    </div>
+    </div>  
   );
 };
 
@@ -71,3 +76,12 @@ interface ActivityBuddyProps {
 }
 
 export { ActivityBuddySelect, ActivityBuddyProps };
+/*
+{data && (
+        <div className="activity-style-table">
+          <DataGrid rows={data} columns={columns}
+            getRowClassName={(params) => { return params.row.id % 2 === 0 ? 'even-row' : 'odd-row'; }}
+            />
+        </div>
+      )}
+*/
