@@ -1,43 +1,31 @@
 import React, {useEffect, useState} from 'react';
 import './../../styling/cardstyling.css'; // Import your CSS file for styling
+import dummyData from './../../dummyValues/depMockData.json'
 
 
 const Card = (props : CardProps) => {
-  const [cards, setCards] = useState<any>(null);
-  const [topCard, setTopCard] = useState<any>(null);
+  const [cards, setCards] = useState<any>(dummyData);
+  const [topCard, setTopCard] = useState<any>({});
 
   useEffect(() => {
-    console.log("2");
-    setCards(props.users);
-
-    const topCardInit = cards[0];
-
-    setTopCard(topCardInit)
-  }, []);
+    setCards(dummyData)
+    setTopCard(dummyData[0])
+  }, [props])
 
   const onNextClick = async () => {
     setCards(prevCards => prevCards.slice(1)); // Remove the top card from the array
-    setTopCard(cards[0])
+    if (cards.length !== 0) { setTopCard(cards[0]) }
+    else {setTopCard({"year": "No More Cards", "age": "No More Cards", "major": "No More Cards", "gender": "No More Cards"})}
+    
   };
 
   const onFriendClick = async () => {
-    alert(cards[0].id);
-  };
-  
-  
-  const renderTopCard = async () => {
-    if (cards.length === 0) {
-      return <div>No more Buddies</div>; // Message when there are no more cards
-    }
-
-    return cards[0];
-    ;
+    alert("You have friended " + topCard.name);
   };
 
   return (
     <div className="stack-of-cards">
       {topCard && (
-        (
           <div className="card" >
             <img src={require('./../../res/blank-profile.png')} />
             <h2 >{topCard.name}</h2>
@@ -57,14 +45,14 @@ const Card = (props : CardProps) => {
             
           </div>
         )
-      )}
+      }
     </div>
   );
 
 };
 
 interface CardProps {
-  users : []
+  onChange(): any
 }
 
 export default Card;

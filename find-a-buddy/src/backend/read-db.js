@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { MongoClient } = require('mongodb');
 
-const uri = "mongodb+srv://rxs1182:rs181102@cluster0.vqmsrmq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://vepyoioc:068cfaff-0801-4d8d-85fb-404c55c28890@cluster0.vqmsrmq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
 
 async function connectToDatabase() {
@@ -61,13 +61,13 @@ async function readAndWriteDataToJson() {
     await connectToDatabase();
 
     const users = await getUsers();
-    await writeDataToFile(users, '/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_read_jsons/users.json');
+    await writeDataToFile(users, '/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_read_jsons/users.json');
 
     const interests = await getInterests();
-    await writeDataToFile(interests, '/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_read_jsons/interests.json');
+    await writeDataToFile(interests, '/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_read_jsons/interests.json');
 
     const events = await getEvents();
-    await writeDataToFile(events, '/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_read_jsons/events.json');
+    await writeDataToFile(events, '/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_read_jsons/events.json');
   } catch (error) {
     console.error("Error reading and writing data to JSON:", error);
     throw error;

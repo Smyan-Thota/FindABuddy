@@ -6,8 +6,6 @@ import Card from './card.tsx';
 
 const ActivityBuddySelect = (props: ActivityBuddyProps) => {
   const [data, setData] = useState<any>(null);
-  
-  const mockMatches = dummyData;  
 
   useEffect(() => {
     fetchData();
@@ -46,9 +44,11 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
 
   };
 
-  return (
+  const getData = async () => {
+    return data;
+  }
 
-    
+  return (
     <div className="activity-buddy-select style-header">
       <h1 className="style-header-text">{`Select a ${props.activityName}`}</h1>
       <p>
@@ -58,7 +58,7 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
 
       <div>  
         
-        <Card users={data} />
+        <Card onChange={getData}></Card>
           
       </div>
 

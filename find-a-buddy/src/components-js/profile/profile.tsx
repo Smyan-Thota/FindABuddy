@@ -2,47 +2,67 @@ import React, { useState } from 'react';
 import { MenuButton } from '../misc/menu-button.tsx';
 import "./../../styling/parentstyling.css";
 import { Link } from 'react-router-dom';
+import writeUsers from './../../backend/local_write_jsons/users.json';
+import readUsers from './../../backend/local_read_jsons/users.json'
+
 
 const Profile = () => {
+    const [caseId, setCaseId] = useState(''); // add input for this
     const [name, setName] = useState('');
+    const [password, setPassword] = useState(''); //add input for this
+    const [primaryInt, setPrimaryInt] = useState(''); // add input for this
+    const [classId, setClassId] = useState('') // add input for this
     const [gender, setGender] = useState('');
     const [age, setAge] = useState('');
     const [graduationYear, setGraduationYear] = useState('');
     const [major, setMajor] = useState('');
 
-    const handleSave = async (e) => {
-        console.log("Attempting to save profile..."); // Debugging line
-        e.preventDefault();
-        
-        const profileData = {
-            name,
-            gender,
-            age: parseInt(age, 10), // Ensure age is sent as an integer
-            graduationYear,
-            major
-        };
+    const primaryInterestList = ["gym bro", "cooking partner", "study buddy"];
+    const validYears = ["freshman", "sophmore", "junior", "senior"]
 
-        try {
-            const response = await fetch('/user-profile', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(profileData),
-            });
+    const addNewProfile = async () => {
+        let idAlreadyExists = false;
+        readUsers.forEach((user) => { 
+            idAlreadyExists = (idAlreadyExists || user.userId === name)
+                && primaryInterestList.includes(primaryInt)
+                && validYears.includes(graduationYear)
+        })
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+        let year : string = "";
 
-            const data = await response.json();
-            console.log('Profile saved:', data);
-            alert('Profile saved successfully!');
-        } catch (error) {
-            console.error('Error saving profile:', error);
-            alert('Failed to save profile.');
+        switch (graduationYear) {
+            case "freshman": 
+                year = "1";
+                break;
+            case "sophmore": 
+                year = "2";
+                break;
+            case "junior": 
+                year = "3";
+                break;
+            case "senior": 
+                year = "4";
+                break;
+            default:
+                year = "1";
+                break;
         }
-    };
+
+        if (idAlreadyExists) { writeUsers.push(
+            {
+                "userId": caseId,
+                "password": password,
+                "name": name,
+                "interests": primaryInt,
+                "year": year,
+                "age": age,
+                "major": major,
+                "gender": gender,
+                "extraParam": classId,
+                "friends": []
+              }
+        ) }
+    }
 
     const logout = () => {
         let parsedCookie = JSON.parse(document.cookie);
@@ -59,7 +79,7 @@ const Profile = () => {
                 <img className="side-page-background" src={require('./../../res/ProfilePageDesign.png')} />
             </div>
             <div>
-                <form onSubmit={handleSave}>
+                <form onSubmit={addNewProfile}>
                     <div className="style-profile-attr">
                         <label htmlFor="name">Name:</label>
                     </div>
