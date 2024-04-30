@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MenuButton } from '../misc/menu-button.tsx';
 import "./../../styling/parentstyling.css";
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
     const [name, setName] = useState('');
@@ -42,6 +43,12 @@ const Profile = () => {
             alert('Failed to save profile.');
         }
     };
+
+    const logout = () => {
+        let parsedCookie = JSON.parse(document.cookie);
+        parsedCookie.userId = ""
+        document.cookie = JSON.stringify(parsedCookie)
+    }
 
     return (
         <div>
@@ -117,6 +124,7 @@ const Profile = () => {
                     <br></br>
                     <br></br>
                     <MenuButton buttonText="Back" pathString="" />
+                    <button  onClick={ () =>{ logout() } }> <Link className="menu-button-link" to="/" >Logout</Link> </button>
                     <button className="menu-button menu-button-link" type="submit">Save Profile</button>
                 </form>
             </div>
