@@ -58,8 +58,7 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
 
       <div>  
         
-        <Card users={data} >
-        </Card> 
+        <Card users={data} />
           
       </div>
 
