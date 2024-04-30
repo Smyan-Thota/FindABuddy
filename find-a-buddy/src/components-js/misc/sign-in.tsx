@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MenuButton } from "./menu-button.tsx";
 import dummyData from "./../../dummyValues/mockData.json";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
     const changeUserCookieUID = (userInfo) => {
@@ -35,7 +36,7 @@ const SignIn = () => {
             </div>
             <div>
                 <MenuButton buttonText="Back" pathString="" />
-                <button onClick={ () =>{changeUserCookieUID(getUserInfo())} }> Submit </button>
+                <button  onClick={ () =>{changeUserCookieUID(getUserInfo()); } }> <Link className="menu-button-link" to="/" >Submit</Link> </button>
             </div>
         </div>
     )

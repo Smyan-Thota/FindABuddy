@@ -19,8 +19,10 @@ const Friends = () => {
     const fetchFriends = async() => {
         try {
             const userId = JSON.parse(document.cookie).userId;
+
             let data = dummyData.filter((user) => { if (user.userId === userId) {return user} })[0].friends;
-            data.map((user, index) => { user["id"] = index})
+
+            data.map((user, index) => { user["id"] = index })
 
             setFriends(data)
         } catch(e) { console.log(e) }
