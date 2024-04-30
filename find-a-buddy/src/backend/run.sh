@@ -2,10 +2,10 @@
 
 
 run_scripts() {
-    cd '/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend' &
+    cd '\Users\niels\OneDrive\Documents\GitHub\FindABuddy\find-a-buddy\src\backend' &
     node read-db.js &
     node write-db.js &
-    cd '/Users/rohansingh/github_repos/FindABuddy/find-a-buddy' & 
+    cd '\Users\niels\OneDrive\Documents\GitHub\FindABuddy\find-a-buddy\src\backend' & 
     npm start &
     wait
 }

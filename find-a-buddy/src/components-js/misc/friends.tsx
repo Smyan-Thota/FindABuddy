@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MenuButton } from "./menu-button.tsx";
-import dummyData from "./../../dummyValues/mockData.json"
+import dummyData from "./../../backend/local_read_jsons/users.json"
 import { DataGrid } from "@mui/x-data-grid";
 import { GridColDef } from "@mui/x-data-grid";
 

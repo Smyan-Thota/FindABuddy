@@ -1,123 +1,254 @@
 [
   {
-    "_id": "65fdc424c778f326ca6c3662",
-    "username": "smyan",
-    "password": "12345678",
-    "age": 21,
-    "gender": "Male",
-    "grad_year": 2024,
-    "major": "Computer Science",
-    "schedule": "free",
-    "created_at": "2024-03-22T17:47:16.411Z"
+    "userId": "ALI100",
+    "password": "password",
+    "name": "Alice",
+    "interests": "gym-bro",
+    "year": "3",
+    "age": "21",
+    "major": "Exercise Science",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Bob",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "6605acb0f55bdc78b84eff8b",
-    "username": "harold_connie",
-    "password": "racket",
-    "age": 45,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "PLC",
-    "created_at": "2024-03-28T17:45:19.600Z"
+    "userId": "BOB100",
+    "password": "password",
+    "name": "Bob",
+    "interests": "cooking-partner",
+    "year": "2",
+    "age": "17",
+    "major": "Culinary Arts",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "6605bc7a4e2a9d86b3ea2eb0",
-    "username": "harold conamacher",
-    "password": "racket",
-    "age": 55,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "Sample schedule data",
-    "created_at": "2024-03-21T00:00:00Z"
+    "userId": "CHA100",
+    "password": "password",
+    "name": "Charlie",
+    "interests": "gym-bro",
+    "year": "4",
+    "age": "23",
+    "major": "Physical Therapy",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Bob",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "6605c69233579e35a25f0d5b",
-    "username": "harold conamacher",
-    "password": "racket",
-    "age": 55,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "Sample schedule data",
-    "created_at": "2024-03-21T00:00:00Z"
+    "userId": "DIA100",
+    "password": "password",
+    "name": "Diana",
+    "interests": "cooking-partner",
+    "year": "1",
+    "age": "18",
+    "major": "Nutrition",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "6605c69db100732a443cba2a",
-    "username": "harold conamacher",
-    "password": "racket",
-    "age": 55,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "Sample schedule data",
-    "created_at": "2024-03-21T00:00:00Z"
+    "userId": "ETH100",
+    "password": "password",
+    "name": "Ethan",
+    "interests": "gym-bro",
+    "year": "3",
+    "age": "20",
+    "major": "Sports Medicine",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "660dc13ae580ca7d5ff658ac",
-    "username": "harold_connie",
-    "password": "racket",
-    "age": 50,
-    "gender": "Male",
-    "grad_year": 1997,
-    "major": "Computer Science",
-    "schedule": "PLC",
-    "created_at": "2024-04-03T20:51:06.203Z"
+    "userId": "FIO100",
+    "password": "password",
+    "name": "Fiona",
+    "interests": "cooking-partner",
+    "year": "2",
+    "age": "19",
+    "major": "Hospitality Management",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "661d7925b5058ef3f40c3c2d",
-    "username": "harold_connie",
-    "password": "racket",
-    "age": 45,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "PLC",
-    "created_at": "2024-04-15T18:59:49.080Z"
+    "userId": "GEO100",
+    "password": "password",
+    "name": "George",
+    "interests": "gym-bro",
+    "year": "4",
+    "age": "22",
+    "major": "Kinesiology",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "66301b4eed1c182c974c760e",
-    "username": "michael lewicki ",
-    "password": "julia",
-    "age": 65,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "probabilistic graph models, computational perception",
-    "created_at": "2024-03-21T00:00:00Z"
+    "userId": "HAN100",
+    "password": "password",
+    "name": "Hannah",
+    "interests": "cooking-partner",
+    "year": "1",
+    "age": "19",
+    "major": "Biology",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "66301b4eed1c182c974c760f",
-    "username": "shuai xu ",
-    "password": "qiskit",
-    "age": 65,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "quantum computing, discrete mathematics",
-    "created_at": "2024-03-21T00:00:00Z"
+    "userId": "IAN100",
+    "password": "password",
+    "name": "Ian",
+    "interests": "gym-bro",
+    "year": "3",
+    "age": "20",
+    "major": "Biomedical Engineering",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "66301f9fb9c272f40d4e2282",
-    "username": "michelle lewicki ",
-    "password": "julia",
-    "age": 65,
-    "gender": "Male",
-    "grad_year": 2023,
-    "major": "Computer Science",
-    "schedule": "probabilistic graph models, computational perception",
-    "created_at": "2024-03-21T00:00:00Z"
+    "userId": "JUL100",
+    "password": "password",
+    "name": "Julia",
+    "interests": "cooking-partner",
+    "year": "1",
+    "age": "17",
+    "major": "Biology",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   },
   {
-    "_id": "66301f9fb9c272f40d4e2283",
-    "username": "michelle lewicki ",
-    "password": "julia",
-    "age": 65,
-    "gender": "Male",
-    "grad_year": 2023,
+    "userId": "BO100",
+    "password": "password",
+    "name": "Bo",
+    "interests": "study-buddy",
+    "year": "2",
+    "age": "19",
+    "major": "Biology",
+    "gender": "male",
+    "extraParam": "ACCT 101",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },  
+  {
+    "userId": "SOP100",
+    "password": "password",
+    "name": "Sophia",
+    "interests": "study-buddy",
+    "year": "3",
+    "age": "20",
     "major": "Computer Science",
-    "schedule": "probabilistic graph models, computational perception",
-    "created_at": "2024-03-21T00:00:00Z"
+    "gender": "female",
+    "extraParam": "CSDS 101",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
   }
 ]

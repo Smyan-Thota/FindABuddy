@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { MenuButton } from "./menu-button.tsx";
-import dummyData from "./../../dummyValues/mockData.json";
+import dummyData from "./../../backend/local_read_jsons/users.json"
 import { Link } from "react-router-dom";
+
 
 const SignIn = () => {
     const changeUserCookieUID = (userInfo) => {

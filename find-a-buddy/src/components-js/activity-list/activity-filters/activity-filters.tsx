@@ -19,8 +19,8 @@ const ActivityFilters = () => {
             document.cookie = document.cookie.replace("CookieConsent=true; ", "");
         }
         console.log(document.cookie)
-        let parsedCookie = JSON.parse(document.cookie.replace("CookieConsent=true; ", ""))
-        parsedCookie[cookieAttributeName] = value
+        let parsedCookie = JSON.parse(document.cookie.replace("CookieConsent=true; ", ""));
+        parsedCookie.filters[cookieAttributeName] = value
         document.cookie = JSON.stringify(parsedCookie)
     }
 

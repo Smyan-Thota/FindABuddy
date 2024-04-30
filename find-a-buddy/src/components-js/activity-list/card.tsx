@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './../../styling/cardstyling.css'; // Import your CSS file for styling
 
 
-const Card = ({ users, }) => {
-  const matches = users;
-  const [cards, setCards] = useState(matches);
+const Card = ({ users }) => {
+  const [cards, setCards] = useState(users);
 
   const onNextClick = () => {
     setCards(prevCards => prevCards.slice(1)); // Remove the top card from the array

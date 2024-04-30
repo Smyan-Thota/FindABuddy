@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { MongoClient } = require('mongodb');
 
-const uri = "mongodb+srv://rxs1182:rs181102@cluster0.vqmsrmq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://vepyoioc:068cfaff-0801-4d8d-85fb-404c55c28890@cluster0.vqmsrmq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
 
 async function connectToDatabase() {
@@ -50,9 +50,9 @@ async function addEvent(event) {
 async function readAndAddData() {
   try {
     // change filepath here
-    const userData = JSON.parse(fs.readFileSync('/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_write_jsons/users.json', 'utf-8'));
-    const interestData = JSON.parse(fs.readFileSync('/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_write_jsons/interests.json', 'utf-8'));
-    const eventData = JSON.parse(fs.readFileSync('/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_write_jsons/events.json', 'utf-8'));
+    const userData = JSON.parse(fs.readFileSync('/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_write_jsons/users.json', 'utf-8'));
+    const interestData = JSON.parse(fs.readFileSync('/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_write_jsons/interests.json', 'utf-8'));
+    const eventData = JSON.parse(fs.readFileSync('/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_write_jsons/events.json', 'utf-8'));
 
     for (const user of userData) {
       await addUser(user);
@@ -67,9 +67,9 @@ async function readAndAddData() {
     }
 
     // clearing json
-    fs.writeFileSync('/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_write_jsons/users.json', '[]', 'utf-8');
-    fs.writeFileSync('/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_write_jsons/interests.json', '[]', 'utf-8');
-    fs.writeFileSync('/Users/rohansingh/github_repos/FindABuddy/find-a-buddy/src/backend/local_write_jsons/events.json', '[]', 'utf-8');
+    fs.writeFileSync('/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_write_jsons/users.json', '[]', 'utf-8');
+    fs.writeFileSync('/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_write_jsons/interests.json', '[]', 'utf-8');
+    fs.writeFileSync('/Users/niels/OneDrive/Documents/GitHub/FindABuddy/find-a-buddy/src/backend/local_write_jsons/events.json', '[]', 'utf-8');
     console.log("JSON files cleared");
   } catch (error) {
     console.error("Error reading and adding data:", error);

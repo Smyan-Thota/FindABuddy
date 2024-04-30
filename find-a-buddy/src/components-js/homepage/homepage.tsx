@@ -3,6 +3,7 @@ import "./../../styling/parentstyling.css";
 import "./../../styling/styling-homepage.css";
 import { MenuButton } from "../misc/menu-button.tsx";
 
+
 /* From the home page, you should be able to access the following pages:
  *   1) Activity List
  *   2) User Profile

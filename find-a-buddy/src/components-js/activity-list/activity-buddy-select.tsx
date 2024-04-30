@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MenuButton } from "../misc/menu-button.tsx";
 import { DataGrid, GridColDef } from '@mui/x-data-grid'; // Import DataGrid component
-import dummyData from "./../../dummyValues/mockData.json";
+import dummyData from "./../../backend/local_read_jsons/users.json"
 import Card from './card.tsx';
 
 const ActivityBuddySelect = (props: ActivityBuddyProps) => {
@@ -58,7 +58,7 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
 
       <div>  
         
-        <Card users={mockMatches} >
+        <Card users={data} >
         </Card> 
           
       </div>

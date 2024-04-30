@@ -7,13 +7,13 @@ const GenderSelector = (params: SelectorParams) => {
         <div className="button-selector-wrapper">
             <p>Gender</p>
             <div className="button-selector">
-                <button onClick={() => {params.valueChangeMethod("gender", "male")}} >
+                <button onClick={() => {params.valueChangeMethod("gender", "Male")}} >
                     Man
                 </button>
-                <button onClick={() => {params.valueChangeMethod("gender", "female")}}>
+                <button onClick={() => {params.valueChangeMethod("gender", "Female")}}>
                     Woman
                 </button>
-                <button onClick={() => {params.valueChangeMethod("gender", "other")}}>
+                <button onClick={() => {params.valueChangeMethod("gender", "Other")}}>
                     Other
                 </button>
             </div>
