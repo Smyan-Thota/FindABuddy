@@ -23,7 +23,7 @@ const Card = ({ users, }) => {
     const topCard = cards[0];
     return (
       <div className="card" >
-        <img src={"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"}></img>
+        <img src={require('./../../res/blank-profile.png')} />
         <h2 >{topCard.name}</h2>
         <p className='ptext'>Year {topCard.year}</p>
         <p className='ptext'>Age: {topCard.age}</p>
