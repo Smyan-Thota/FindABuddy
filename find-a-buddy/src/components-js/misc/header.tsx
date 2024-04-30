@@ -6,7 +6,6 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        console.log('Menu toggle attempted');
         setIsMenuOpen(!isMenuOpen);
     };
 

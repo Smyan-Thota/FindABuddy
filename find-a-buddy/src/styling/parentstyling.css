@@ -85,16 +85,12 @@ button:hover {
 
 /* Style profile attributes (e.g. name, gender, age...) */
 .style-profile-attr {
-    position: relative;
     text-align: center;
-    left: -7vw;
     top: 60px;
 }
 
 .profile-style-input-box {
-    position: relative;
     text-align: center;
-    left: 7vw;
     top: 40px;
 }
 

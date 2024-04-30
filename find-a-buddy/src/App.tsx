@@ -8,6 +8,8 @@ import { ActivityBuddySelect } from './components-js/activity-list/activity-budd
 import SignUp from './components-js/sign-up/sign-up.tsx';
 import StudyBuddyClassSelect from './components-js/activities/study-buddy/study-buddy-class-select.tsx';
 import Header from './components-js/misc/header.tsx';
+import Friends from './components-js/misc/friends.tsx';
+import SignIn from './components-js/misc/sign-in.tsx';
 
 /*
  * This basically just serves to do the routing for the whole website, the actual website root is at
@@ -27,6 +29,8 @@ function App() {
                 <Route path="cooking-partner/*"         element={ <ActivityBuddySelect   activityName="Cooking Partner" parameterName="cooking-partner" /> } />
                 <Route path="study-buddy/*"             element={ <ActivityBuddySelect   activityName="Study Buddy" parameterName="study-buddy" /> } />
                 <Route path="study-buddy-class-select/" element={ <StudyBuddyClassSelect /> } />
+                <Route path="friends/"                  element={ <Friends /> } />
+                <Route path="sign-in/"                  element={ <SignIn /> } />
             </Routes>
         </BrowserRouter>
     </div>

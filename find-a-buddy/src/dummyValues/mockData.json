@@ -1,110 +1,254 @@
 [
-            {
-              "name": "Alice",
-              "interests": "gym-bro",
-              "year": "3",
-              "age": "21",
-              "major": "Exercise Science",
-              "gender": "female",
-              "extraParam": ""
-            },
-            {
-              "name": "Bob",
-              "interests": "cooking-partner",
-              "year": "2",
-              "age": "17",
-              "major": "Culinary Arts",
-              "gender": "male",
-              "extraParam": ""
-            },
-            {
-              "name": "Charlie",
-              "interests": "gym-bro",
-              "year": "4",
-              "age": "23",
-              "major": "Physical Therapy",
-              "gender": "male",
-              "extraParam": ""
-            },
-            {
-              "name": "Diana",
-              "interests": "cooking-partner",
-              "year": "1",
-              "age": "18",
-              "major": "Nutrition",
-              "gender": "female",
-              "extraParam": ""
-            },
-            {
-              "name": "Ethan",
-              "interests": "gym-bro",
-              "year": "3",
-              "age": "20",
-              "major": "Sports Medicine",
-              "gender": "male",
-              "extraParam": ""
-            },
-            {
-              "name": "Fiona",
-              "interests": "cooking-partner",
-              "year": "2",
-              "age": "19",
-              "major": "Hospitality Management",
-              "gender": "female",
-              "extraParam": ""
-            },
-            {
-              "name": "George",
-              "interests": "gym-bro",
-              "year": "4",
-              "age": "22",
-              "major": "Kinesiology",
-              "gender": "male",
-              "extraParam": ""
-            },
-            {
-              "name": "Hannah",
-              "interests": "cooking-partner",
-              "year": "1",
-              "age": "19",
-              "major": "Biology",
-              "gender": "female",
-              "extraParam": ""
-            },
-            {
-              "name": "Ian",
-              "interests": "gym-bro",
-              "year": "3",
-              "age": "20",
-              "major": "Biomedical Engineering",
-              "gender": "male",
-              "extraParam": ""
-            },
-            {
-              "name": "Julia",
-              "interests": "cooking-partner",
-              "year": "1",
-              "age": "17",
-              "major": "Biology",
-              "gender": "female",
-              "extraParam": ""
-            },
-            {
-              "name": "Bo",
-              "interests": "study-buddy",
-              "year": "2",
-              "age": "19",
-              "major": "Biology",
-              "gender": "male",
-              "extraParam": "ACCT 101"
-            },  
-            {
-              "name": "Sophia",
-              "interests": "study-buddy",
-              "year": "3",
-              "age": "20",
-              "major": "Computer Science",
-              "gender": "female",
-              "extraParam": "CSDS 101"
-            }
+  {
+    "userId": "ALI100",
+    "password": "password",
+    "name": "Alice",
+    "interests": "gym-bro",
+    "year": "3",
+    "age": "21",
+    "major": "Exercise Science",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Bob",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "BOB100",
+    "password": "password",
+    "name": "Bob",
+    "interests": "cooking-partner",
+    "year": "2",
+    "age": "17",
+    "major": "Culinary Arts",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "CHA100",
+    "password": "password",
+    "name": "Charlie",
+    "interests": "gym-bro",
+    "year": "4",
+    "age": "23",
+    "major": "Physical Therapy",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Bob",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "DIA100",
+    "password": "password",
+    "name": "Diana",
+    "interests": "cooking-partner",
+    "year": "1",
+    "age": "18",
+    "major": "Nutrition",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "ETH100",
+    "password": "password",
+    "name": "Ethan",
+    "interests": "gym-bro",
+    "year": "3",
+    "age": "20",
+    "major": "Sports Medicine",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "FIO100",
+    "password": "password",
+    "name": "Fiona",
+    "interests": "cooking-partner",
+    "year": "2",
+    "age": "19",
+    "major": "Hospitality Management",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "GEO100",
+    "password": "password",
+    "name": "George",
+    "interests": "gym-bro",
+    "year": "4",
+    "age": "22",
+    "major": "Kinesiology",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "HAN100",
+    "password": "password",
+    "name": "Hannah",
+    "interests": "cooking-partner",
+    "year": "1",
+    "age": "19",
+    "major": "Biology",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "IAN100",
+    "password": "password",
+    "name": "Ian",
+    "interests": "gym-bro",
+    "year": "3",
+    "age": "20",
+    "major": "Biomedical Engineering",
+    "gender": "male",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "JUL100",
+    "password": "password",
+    "name": "Julia",
+    "interests": "cooking-partner",
+    "year": "1",
+    "age": "17",
+    "major": "Biology",
+    "gender": "female",
+    "extraParam": "",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },
+  {
+    "userId": "BO100",
+    "password": "password",
+    "name": "Bo",
+    "interests": "study-buddy",
+    "year": "2",
+    "age": "19",
+    "major": "Biology",
+    "gender": "male",
+    "extraParam": "ACCT 101",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  },  
+  {
+    "userId": "SOP100",
+    "password": "password",
+    "name": "Sophia",
+    "interests": "study-buddy",
+    "year": "3",
+    "age": "20",
+    "major": "Computer Science",
+    "gender": "female",
+    "extraParam": "CSDS 101",
+    "friends": [
+      {
+        "name": "Alice",
+        "interests": "gym-bro"
+      },
+      {
+        "name": "Charlie",
+        "interests": "gym-bro"
+      }
+    ]
+  }
 ]

@@ -45,7 +45,7 @@ const Profile = () => {
 
     return (
         <div>
-            <div className="style-header">
+            <div className="style-header" >
                 <h1 className="style-header-text">Profile</h1>
             </div>
             <div>

@@ -26,7 +26,7 @@ const ActivityBuddySelect = (props: ActivityBuddyProps) => {
       // This is just the basic url for the website
       const filterJSON : string = document.cookie
 
-      const filterJSONData = JSON.parse(filterJSON)
+      const filterJSONData = JSON.parse(filterJSON)["filters"]
 
       let filteredData = dummyData.filter((user) => user.interests === props.parameterName)
       if (filterJSONData.gender     !== '') { filteredData = filteredData.filter((user) => user.gender     === filterJSONData.gender) }
